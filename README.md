@@ -4,7 +4,7 @@ A Shopping cart
 
 ## Demo
 
-[Shopping cart Demo](https://link.vercel.app/)
+[Shopping cart Demo](https://ref-hub-assessment-sudam-dissanayake.vercel.app/)
 
 ## Recommended IDE Setup
 
