@@ -1,18 +1,14 @@
 "use client";
-import Image from "next/image";
+
+import { TBook } from "@/app/hooks/use-books";
+import { useCart } from "@/store/cart";
 import {
 	Box,
 	Button,
-	createTheme,
-	Flex,
-	Grid,
-	Skeleton,
-	Text,
+	Text
 } from "@mantine/core";
-import { TBook } from "@/app/hooks/use-books";
-import { IconTrash } from "@tabler/icons-react";
-import { useCart } from "@/store/cart";
-import { IconCirclePlus, IconCircleMinus } from "@tabler/icons-react";
+import { IconCircleMinus, IconCirclePlus, IconTrash } from "@tabler/icons-react";
+import Image from "next/image";
 
 export default function CartItem({
 	book,

@@ -1,8 +1,6 @@
-import React from "react";
-import { useDisclosure } from "@mantine/hooks";
-import { Modal, Button, Box, Title, Text } from "@mantine/core";
-import Image from "next/image";
 import { useCart } from "@/store/cart";
+import { Box, Button, Modal, Text, Title } from "@mantine/core";
+import Image from "next/image";
 import { useRouter } from "next/navigation";
 
 export default function SuccessModal({

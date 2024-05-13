@@ -1,6 +1,6 @@
 import { TCartItem } from "@/store/cart";
-import CartItem, { CartItemSekeleton } from "./cart-item";
 import { Box } from "@mantine/core";
+import CartItem, { CartItemSekeleton } from "./cart-item";
 
 export default function CartItems({ cartItems }: { cartItems: TCartItem[] }) {
   return (

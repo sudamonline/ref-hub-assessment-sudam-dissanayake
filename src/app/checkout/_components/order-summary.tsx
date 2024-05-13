@@ -1,6 +1,5 @@
-import React from "react";
-import { Title, Text, Box, Skeleton } from "@mantine/core";
 import { useCart } from "@/store/cart";
+import { Box, Skeleton, Text, Title } from "@mantine/core";
 
 export default function OrderSummary() {
 	const cartItems = useCart((state) => state.items);

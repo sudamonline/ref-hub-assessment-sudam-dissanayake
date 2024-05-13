@@ -1,30 +1,29 @@
 "use client";
 
+import { useCart } from "@/store/cart";
 import {
 	ActionIcon,
 	Box,
 	Button,
 	Container,
-	TextInput,
-	Select,
-	RangeSlider,
-	Skeleton,
 	InputLabel,
+	RangeSlider,
+	Select,
+	Skeleton,
+	TextInput,
 } from "@mantine/core";
 import Image from "next/image";
-import { useCart } from "@/store/cart";
 
 const CATEGORIES = ["cloud", "design-patterns", "mongodb", "javascript"];
 
 import {
 	IconSearch,
 	IconShoppingCartPlus,
-	IconX,
-	IconChevronDown,
+	IconX
 } from "@tabler/icons-react";
 import { DataTable, DataTableProps } from "mantine-datatable";
-import { PAGE_SIZE, TBook, useBooks } from "../hooks/use-books";
 import { toast } from "sonner";
+import { PAGE_SIZE, TBook, useBooks } from "../hooks/use-books";
 
 export default function Books() {
 	const {

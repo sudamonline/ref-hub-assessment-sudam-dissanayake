@@ -1,11 +1,11 @@
 "use client";
 
+import { useCart } from "@/store/cart";
 import { useMainStore } from "@/store/main";
 import { AppShell, Box, Burger, Button, Container, Group } from "@mantine/core";
 import { IconShoppingCartCopy } from "@tabler/icons-react";
 import Image from "next/image";
 import Link from "next/link";
-import { useCart } from "@/store/cart";
 import classes from "./styles.module.css";
 
 export default function Header({

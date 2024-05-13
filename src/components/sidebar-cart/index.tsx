@@ -1,7 +1,7 @@
 "use client";
 
-import { useMainStore } from "@/store/main";
 import { useCart } from "@/store/cart";
+import { useMainStore } from "@/store/main";
 import { Box, Button, Drawer, Text, Title } from "@mantine/core";
 import { IconX } from "@tabler/icons-react";
 import { useRouter } from "next/navigation";

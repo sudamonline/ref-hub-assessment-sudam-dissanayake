@@ -3,9 +3,9 @@
 import { AppShell, UnstyledButton } from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
 import { ReactNode } from "react";
+import SidebarCart from "../sidebar-cart";
 import Header from "./header";
 import classes from "./styles.module.css";
-import SidebarCart from "../sidebar-cart";
 
 export default function Layout({ children }: { children: ReactNode }) {
 	const [opened, { toggle }] = useDisclosure();
