@@ -2,13 +2,12 @@
 
 import { TBook } from "@/app/hooks/use-books";
 import { useCart } from "@/store/cart";
+import { Box, Button, Skeleton, Text, useMatches } from "@mantine/core";
 import {
-	Box,
-	Button,
-	Skeleton,
-	Text
-} from "@mantine/core";
-import { IconCircleMinus, IconCirclePlus, IconTrash } from "@tabler/icons-react";
+	IconCircleMinus,
+	IconCirclePlus,
+	IconTrash,
+} from "@tabler/icons-react";
 import Image from "next/image";
 
 export default function CartItem({
@@ -22,11 +21,21 @@ export default function CartItem({
 	const increaseQuantity = useCart((state) => state.increaseQuantity);
 	const decreaseQuantity = useCart((state) => state.decreaseQuantity);
 
+	const detailBoxPadding = useMatches({
+		base: "15px 10px",
+		sm: "20px",
+	});
+
+	const titleFontSize = useMatches({
+		base: "14px",
+		sm: "16px",
+	});
+
 	return (
 		<Box
 			display={"flex"}
 			sx={{
-				gap: "20px",
+				gap: "10px",
 				border: "1px solid #d4d4d4",
 				borderRadius: "6px",
 				position: "relative",
@@ -36,8 +45,8 @@ export default function CartItem({
 			<Box
 				sx={{
 					position: "absolute",
-					top: "20px",
-					right: "20px",
+					bottom: "10px",
+					right: "10px",
 					color: "red",
 					cursor: "pointer",
 				}}
@@ -46,13 +55,13 @@ export default function CartItem({
 			</Box>
 			<Image
 				src={book.image}
-				width={150}
-				height={200}
+				width={120}
+				height={170}
 				alt="book"
 				style={{ objectFit: "contain" }}
 			/>
-			<Box p={"20px"}>
-				<Text size="md" fw={500}>
+			<Box p={detailBoxPadding}>
+				<Text size={titleFontSize} fw={500}>
 					{book.title}
 				</Text>
 				<Text size="lg" fw={600} c={"green"}>
